@@ -40,3 +40,9 @@
 + 1、居中：`<center>文字</center>`
 + 2、左对齐：`<p align="left">文字</p>`
 + 3、右对齐：`<p align="right">诶嘿</p>`
+
+### 6、限制图片大小
++ `<img src="xxx/xx.xx" width = "300" height = "200" alt="图片名称" align=center />`
++ `<img src=".xxx/xx.xx" style="zoom:50%" />`
+
+!!! 未整理（https://blog.csdn.net/YhL_Leo/article/details/50099843）
