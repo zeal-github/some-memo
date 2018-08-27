@@ -252,4 +252,9 @@ shartx
 1. `which [-a] command` : 查询命令的执行文件
 2. `locate [-ir] keyword` : 查找文件，这个命令是在系统数据库内直接查询，并不是查询硬盘，所以速度会很快。但是数据库可能每天才更新一次，所以有时候无法实时反应硬盘内容。
 3. `updatedb` ： 更新系统数据库，由于这个命令需要查找硬盘，所以可能会需要几分钟
-4. 
+4. `find [path] [option] [action]` 查找文件
+    1. 与时间有关的参数： -atime, -ctime, -mtime [+/-]n,查询指定日期的文件<img src="./image/bird03.png" />
+    2. 与用户/用户组相关的参数：-user, -group, -nouser, -nogroup
+    3. 与文件权限及名称有关的参数
+        1. -name filename ： 查找文件名为filename的文件；filename可以使用正则表达式，如 `find -name '*httpd*'`
+        2. -size [+-]SIZE ： 查找比SIZE还要大（+）或小（-）的文件
