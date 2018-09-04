@@ -258,3 +258,13 @@ shartx
     3. 与文件权限及名称有关的参数
         1. -name filename ： 查找文件名为filename的文件；filename可以使用正则表达式，如 `find -name '*httpd*'`
         2. -size [+-]SIZE ： 查找比SIZE还要大（+）或小（-）的文件
+
+
+#### 8.2.2 连接文件：ln
+
+1. hard link（硬连接）：
+    1. 不同文件名指向相同的inode，通过inode读取相同的block内容。将任何其中一个‘文件名’删除，inode和block都还会存在。可以通过另一个文件名访问
+    2. `限制`：hard link 不能连接`目录`，因为如果连接目录的话，目录下的内容都要同时创建硬连接
+2. symbolic link （符号连接，也就是快捷方式）：
+    1. ln -s source-file destenation-file
+    2. 通过读取连接文件的连接到正确的目录，通过正确的目录读取inode然后读取block
